@@ -1,0 +1,5 @@
+Struktur table tidak optimal untuk mendapatkan 10 top product dengan pembelian terbesar pada state CA.
+Alasannya karena:
+1. Kondisi yang digunakan adalah column state pada table customers dimana column tersebut tidak termasuk dalam primary key maupun index
+2. Column state juga tidak wajib disi atau bisa null
+Kedua alasan tersebut membuat cost yang dihasilkan dari query yang dijalankan cukup besar yaitu 465.865874 (menggunakan syntax SHOW STATUS LIKE 'Last_Query_Cost' setelah query di execute)

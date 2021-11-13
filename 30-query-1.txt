@@ -1,0 +1,5 @@
+Struktur table sudah optimal untuk menghasilkan data state dan data penjualan terbesar. 
+Alasannya karena
+1. Table yang dibutuhkan tidak terlalu banyak (customers, orders, ordersdetail), 
+2. Relasi antar table yang digunakan adalah primary key dari table-table tersebut, sehingga index dari ketiga table tersebut dapat digunakan dan meyebabkan cost query dan run timenya tidak besar 
+yaitu 0.000 sec untuk cost query (menggunakan syntax SHOW STATUS LIKE 'Last_Query_Cost' setelah query di execute) dan  0.005 sec untuk run timenya

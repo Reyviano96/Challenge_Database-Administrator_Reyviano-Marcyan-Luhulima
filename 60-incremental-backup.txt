@@ -1,0 +1,7 @@
+1. Using mysqlbinlog
+   Keuntungan menggunakan binary logs adalah membutuhkan space yang kecil, terdapat perintah untk mengekstrak pernyataan SQL dan mengeditnya sebelum memulihkan dan proses backup lebih cepat karena hanya menyalin file
+   Kekurangannya adalah kompleks management untuk menyalin binary logs file serta membutuhkan waktu tambahan untuk restore.
+2. Using mariabackup
+   Keuntungan menggunakan mariabackup adalah waktu restore dan backup lebih cepat bahkan untuk database yang besar/
+   Kekurangannya adalah untuk sebelum proses backup dibutuhkan file backup sebelumnya sehingga memakan space dan tidak dapat melakukan perubahan pada data backup sebelum restore data   
+   

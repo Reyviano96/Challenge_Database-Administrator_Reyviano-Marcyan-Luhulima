@@ -1,0 +1,9 @@
+1. Using mysqldump
+   Keuntungan menggunakan mysqldump adalah mudah digunakan dan terdapat table locking. 
+   Kekurangan adalah jika size tabel besar, maka jangka waktu database di lock lebih lama karena proses dumpung data secara serial sehingga menyebabkan executing time untuk mysqldump cukup lama.
+2. Using mysqlpump
+   Keuntungan menggunakan mysqlpump adalah  semua operasi terkait dumping untuk beberapa database secara paralel, sehingga waktu yang dibutuhkan untuk backup database lebih cepat.
+   Kekurangan adalah MySQLpump tidak melakukan backup terhadap performance_schema, skema sys dan ndbinfo/
+3. Using Mariabackup
+   Keuntungan menggunakan Mariabackup adalah waktu backup yang lebih cepat, ukuran backup lebih kecil, backup mencakup file log dan configuration
+   Kekurangan adalah recovery time untuk me-recover  sebuah single data point/row lebih lama karena arena memerlukan recovery server penuh sebelum meminta data yang diperlukan.    
